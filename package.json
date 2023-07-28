@@ -1,0 +1,27 @@
+{
+  "name": "express_server_playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeasinrafee/express_server_playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeasinrafee/express_server_playground/issues"
+  },
+  "homepage": "https://github.com/yeasinrafee/express_server_playground#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
