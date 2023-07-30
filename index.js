@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 
 // Mongodb Import
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 // Middleware
 app.use(cors());
@@ -40,6 +40,18 @@ async function run() {
     app.post("/users", async (req, res) => {
       const data = req.body;
       const result = await usersCollection.insertOne(data);
+      res.send(result);
+    });
+
+    // Update full user
+    app.put("/users/:id", async (req, res) => {
+      const id = req.params.id;
+      const data = req.body;
+      const update = {
+        $set: data,
+      };
+      const filter = { _id: new ObjectId(id) };
+      const result = await usersCollection.updateOne(filter, update);
       res.send(result);
     });
 
